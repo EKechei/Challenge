@@ -20,3 +20,28 @@
         }
     ]
 }
+
+
+
+
+
+
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "logs:CreateLogGroup",
+                "logs:CreateLogStream",
+                "logs:PutLogEvents",
+                "ec2:StartInstances",
+                "ec2:StopInstances"
+            ],
+            "Resource": [
+                "arn:aws:logs:*:*:log-group:*",
+                "arn:aws:ec2:*:*:instance/*"
+            ]
+        }
+    ]
+}
